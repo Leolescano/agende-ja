@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum StatusAppointment {
+  PENDENTE
+  CONFIRMADO
+  CANCELADO
+}
+
+enum StatusPayment {
+  PAGO
+  PENDENTE
+  CANCELADO
+}
+
+
+
+model Client {
+  id           Int           @id @default(autoincrement())
+  name         String
+  email        String        @unique
+  password     String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  appointments Appointment[]
+}
+
+model Professional {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  keyPIX    String?
+  telephone String?
+  address   String?
+  password  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  services  Service[]
+}
+
+model Service {
+  id             Int             @id @default(autoincrement())
+  typeService    String
+  description    String
+  price          Decimal
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  professionalId Int
+  professional   Professional    @relation(fields: [professionalId], references: [id])
+  serviceBookings ServiceBooking[]
+}
+
+model Appointment {
+  id            Int             @id @default(autoincrement())
+  clientId      Int
+  dateHour      DateTime
+  status        StatusAppointment
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  value         Decimal
+  client        Client          @relation(fields: [clientId], references: [id])
+  serviceBookings ServiceBooking[]
+  payment       Payment?
+}
+
+model ServiceBooking {
+  id            Int             @id @default(autoincrement())
+  appointmentId Int
+  serviceId     Int
+  service       Service         @relation(fields: [serviceId], references: [id])
+  appointment   Appointment     @relation(fields: [appointmentId], references: [id])
+}
+
+model Payment {
+  id            Int         @id @default(autoincrement())
+  appointmentId Int @unique
+  value         Decimal
+  dateTime      DateTime
+  statusPayment StatusPayment
+  updatedAt     DateTime    @updatedAt
+  appointment   Appointment @relation(fields: [appointmentId], references: [id])
+}
+
+
