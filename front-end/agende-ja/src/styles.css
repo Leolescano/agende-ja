@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+:root {
+    --primary-color: rgba(61, 169, 252, 1)
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+body {
+    height: 100vh;
+}

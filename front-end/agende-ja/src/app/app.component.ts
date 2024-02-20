@@ -13,3 +13,4 @@ import { HomeComponent } from './pages/home/home.component';
 export class AppComponent {
   title = 'agende-ja';
 }
+
