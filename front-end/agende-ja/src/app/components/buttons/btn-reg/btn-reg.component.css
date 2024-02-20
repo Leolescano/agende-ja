@@ -1,0 +1,9 @@
+button {
+    width: 60%;
+    height: 5%;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 15px;
+    background-color: #3DA9FC;
+    border-color: #3DA9FC;
+}
