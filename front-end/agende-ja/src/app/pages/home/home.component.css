@@ -1,0 +1,40 @@
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 8%;
+}
+
+.or {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 3%;
+    font-weight: 600;
+
+}
+
+span {
+    width: 10%;
+    height: 1.1px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+.or span {
+    margin-top: 3.5%;
+}
