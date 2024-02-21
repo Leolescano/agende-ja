@@ -4,13 +4,13 @@
     </div>
 
     <footer>
-        <app-btn-join />
+        <app-btn-join (click)="redirectTo('/login')" />
         <div class="or">
             <span></span>
             <p> ou </p>
             <span></span>
         </div>
-        <app-btn-reg />
+        <app-btn-reg [routerLink]="['/cadastro']" />
     </footer>
 
 </main>
