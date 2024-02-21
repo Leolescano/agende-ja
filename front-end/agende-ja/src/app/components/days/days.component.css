@@ -1,0 +1,31 @@
+.day button.selected {
+    background-color: #FFB35A;
+    color: white;
+    border: 1px solid #FFB35A;
+}
+
+.day button .month {
+    font-size: x-large;
+    font-weight: 300;
+}
+
+
+.day {
+    width: 100%;
+}
+
+.day button {
+    padding: 0;
+    height: 118px;
+    min-width: 64px;
+    border-radius: 16px;
+    border: 1px solid #e9f1ff;
+    background-color: white;
+    font-size: x-large;
+    font-weight: 600;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

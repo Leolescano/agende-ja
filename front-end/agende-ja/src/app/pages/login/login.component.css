@@ -1,7 +1,18 @@
 a {
     font-size: x-small;
+    margin-top: -5%;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
 }
 
 main {
     max-width: 600px;
+}
+
+#content {
+    height: 100%;
+    padding-top: 40%;
 }

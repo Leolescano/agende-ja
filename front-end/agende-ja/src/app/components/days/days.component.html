@@ -1,0 +1,8 @@
+<div class="d-flex flex-row overflow-auto w-100 gap-3 py-4 px-2 day">
+    @for (item of array; track $index) {
+    <button [class]="selected == item ? 'selected' : ''" (click)="selectDay(item)">
+        <span class="days">{{ item }}</span>
+        <span class="month">{{ getDayOfWeek(item) }}</span>
+    </button>
+    }
+</div>
