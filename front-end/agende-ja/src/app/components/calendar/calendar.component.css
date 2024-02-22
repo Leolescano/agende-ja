@@ -1,0 +1,17 @@
+:host ::ng-deep .p-datepicker {
+    border-radius: 16px !important;
+    border-color: #E9F1FF;
+}
+
+:host ::ng-deep .p-datepicker-month {
+    color: #3DA9FC !important;
+}
+
+:host ::ng-deep .p-datepicker-year {
+    color: #3DA9FC !important;
+}
+
+:host ::ng-deep .p-datepicker {
+    width: 330px;
+    height: 340px;
+}

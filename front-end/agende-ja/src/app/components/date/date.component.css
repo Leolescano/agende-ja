@@ -1,0 +1,27 @@
+.date {
+    display: flex;
+    width: 100%;
+}
+
+.date h2 {
+    width: 100%;
+    font-weight: 700;
+}
+
+.calendar {
+    display: flex;
+    justify-content: flex-end;
+    height: 42px;
+    width: 90%;
+    padding-right: 7%;
+    color: var(--primary-color);
+}
+
+.pen {
+    margin-left: 5%;
+}
+
+
+i {
+    font-size: 32px;
+}
