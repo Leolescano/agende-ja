@@ -4,6 +4,10 @@
     <app-date />
 
     <app-days />
+    @if (isHidden) {
+    <app-calendar class="m-auto" (onSelectedDate)="onSelected($event)" />
+    } @else {
+    <app-hours />
+    }
 
-    <app-calendar class="m-auto" />
 </main>

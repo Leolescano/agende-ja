@@ -1,0 +1,8 @@
+<main>
+    <div [class.selected]="isSelected(category.name)" *ngFor="let category of categories" class="field-checkbox radios">
+        <label [for]="category.key" class="ml-2">{{ category.name }}</label>
+        <p-radioButton name="category" [value]="category" [(ngModel)]="selectedCategory"
+            (onClick)="selectCategory(category.name)">
+        </p-radioButton>
+    </div>
+</main>

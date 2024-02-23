@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, LOCALE_ID, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { CalendarModule } from 'primeng/calendar';
 
@@ -14,6 +14,7 @@ import { CalendarModule } from 'primeng/calendar';
   styleUrl: './calendar.component.css'
 })
 export class CalendarComponent implements OnInit {
+  @Output() onSelectedDate = new EventEmitter();
 
   constructor(private config: PrimeNGConfig) { }
 
@@ -32,5 +33,9 @@ export class CalendarComponent implements OnInit {
       monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
       today: 'Hoje'
     });
+  }
+
+  onSelect(value: Date) {
+    this.onSelectedDate.emit(value);
   }
 }
