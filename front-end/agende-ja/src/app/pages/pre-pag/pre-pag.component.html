@@ -1,0 +1,29 @@
+@if (pago){
+<app-header title="Pague com:" />
+<main>
+
+    <img src="../../../assets/logo-pix.png" alt="Logo do Pix">
+    <img src="../../../assets/pix.png" alt="Qr pix">
+    <div class="chave">
+        <h4>Chave: </h4>
+        <p>{{chave}}</p>
+    </div>
+
+    <div class="acesse">
+        <p>Para pagar acesse seu banco,<br>
+            clique em Pagar com Pix, aponte <br>
+            seu celular e leia o QR CODE
+        </p>
+    </div>
+</main>
+}
+@else {
+<app-header title="Pagamento Finalizado!" />
+<main>
+    <img src="../../../assets/logo-pix.png" alt="Logo do Pix">
+    <img src="../../../assets/pago.png" alt="Pix Pago">
+    <div class="btn">
+        <app-button title="Pagamento Concluido!" (onClick)="onSelected()" />
+    </div>
+</main>
+}

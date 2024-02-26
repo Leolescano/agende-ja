@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87vh;
+    gap: 70px;
+}
+
+img {
+    height: 254px;
+    width: 296px;
+}
+
+.boxs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.off {
+    opacity: 0.4;
+}

@@ -1,0 +1,21 @@
+<app-header title="Em Progresso!" />
+
+<main>
+    @if (isHidden) {
+    <img src="../../../assets/Group 1000000863.png" alt="Progresso 60%">
+    <div class="boxs">
+        <app-box title="Manicure" />
+        <app-box title="Pagamento Pendente!" icon="fa-solid fa-arrow-right" (click)="redirectTo('/pre-pag')" />
+        <app-box title="Concluido" class="off" />
+    </div>
+    } @else {
+    <img src="../../../assets/Group 1000000864.png" alt="Progresso 100%">
+    <div class="boxs">
+        <app-box title="Manicure" />
+        <app-box title="Pagamento Concluido!" />
+        <app-box title="Concluido" icon="fa-solid fa-arrow-right" (click)="redirectTo('/agenda')" />
+    </div>
+    }
+
+
+</main>

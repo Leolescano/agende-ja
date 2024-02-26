@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #3DA9FC;
+    border-radius: 16px;
+    padding: 20px;
+    width: 313.92px;
+    height: 69.31px;
+}
+
+p {
+    font-size: larger;
+    font-weight: 700;
+}
+
+i {
+    font-size: larger;
+}
